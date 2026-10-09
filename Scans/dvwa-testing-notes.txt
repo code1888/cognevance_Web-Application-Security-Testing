@@ -1,0 +1,115 @@
+DVWA TESTING NOTES
+==================
+
+Project:
+Web Application Security Testing
+
+Target:
+Damn Vulnerable Web Application (DVWA)
+
+URL:
+http://127.0.0.1/DVWA/
+
+Environment:
+Kali Linux
+Apache
+MariaDB
+DVWA
+
+DVWA Security Levels Tested:
+- Low
+- Medium
+
+TEST 1: SQL INJECTION
+---------------------
+Module:
+SQL Injection
+
+Security Level:
+Low
+
+Purpose:
+Demonstrate unsafe SQL query handling.
+
+Observed Result:
+Controlled SQL injection input caused the application
+to return multiple database records.
+
+Status:
+VULNERABLE
+
+
+TEST 2: BLIND SQL INJECTION
+---------------------------
+Module:
+SQL Injection (Blind)
+
+Security Level:
+Low
+
+Purpose:
+Compare application responses for different SQL
+conditions.
+
+Observed Result:
+Different application responses were observed when
+the SQL condition evaluated differently.
+
+Status:
+VULNERABLE
+
+
+TEST 3: REFLECTED XSS
+---------------------
+Module:
+XSS (Reflected)
+
+Security Level:
+Low
+
+Payload:
+<script>alert('XSS')</script>
+
+Observed Result:
+The JavaScript proof-of-concept was reflected and
+executed by the browser.
+
+Status:
+VULNERABLE
+
+
+TEST 4: STORED XSS
+------------------
+Module:
+XSS (Stored)
+
+Security Level:
+Low
+
+Payload:
+<script>alert('Stored XSS')</script>
+
+Observed Result:
+The supplied content was stored and executed when
+the affected page was rendered.
+
+Status:
+VULNERABLE
+
+
+BURP SUITE
+----------
+Used to intercept and inspect HTTP requests and
+responses during testing.
+
+
+NIKTO
+-----
+Used to perform a basic web-server security scan
+against the local DVWA application.
+
+
+ETHICAL SCOPE
+-------------
+Testing was performed only against the locally
+hosted, intentionally vulnerable DVWA application.

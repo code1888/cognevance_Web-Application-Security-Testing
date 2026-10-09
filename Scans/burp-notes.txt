@@ -1,0 +1,34 @@
+BURP SUITE TESTING NOTES
+========================
+
+Project: Web Application Security Testing
+Target: http://127.0.0.1/DVWA/
+Environment: Local DVWA Laboratory
+
+Tool:
+Burp Suite Professional
+
+Proxy:
+127.0.0.1:8080
+
+Testing Activities:
+1. Configured Burp Suite proxy.
+2. Intercepted DVWA HTTP requests.
+3. Sent selected requests to Repeater.
+4. Inspected HTTP request and response data.
+5. Tested XSS and SQL Injection requests in the
+   intentionally vulnerable DVWA application.
+
+SQL Injection:
+- DVWA SQL Injection module tested.
+- Security Level: Low.
+- Requests were inspected using Burp Repeater.
+
+XSS:
+- Reflected XSS tested.
+- Stored XSS tested.
+- Requests/responses were inspected using Burp Suite.
+
+Important:
+All testing was performed against the local DVWA
+laboratory at 127.0.0.1.
